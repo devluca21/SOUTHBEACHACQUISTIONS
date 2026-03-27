@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Linkedin, Twitter } from "lucide-react";
+import { BrandLogo } from "./BrandLogo";
 
 const links = [
   { href: "#acquisitions", label: "Acquisitions" },
@@ -14,12 +15,9 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-14 md:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div>
-            <div className="inline-flex items-center gap-2 font-extrabold text-lg">
-              <span className="flex items-center justify-center w-11 h-11 rounded-full bg-white/15 text-white text-sm font-extrabold">
-                SBA
-              </span>
-              South Beach Acquisitions
-            </div>
+            <Link href="/" className="inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/80 rounded-sm">
+              <BrandLogo className="h-10 max-h-10 md:h-12 md:max-h-12 max-w-[min(100%,260px)] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity" />
+            </Link>
             <p className="text-white/65 text-sm mt-4 max-w-sm leading-relaxed">
               High-ROI fund and mandate focused on southeast Dominican Republic tourism, development,
               and commercial rental income.

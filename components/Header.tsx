@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { BrandLogo } from "./BrandLogo";
 
 const centerLinks = [
   { href: "#acquisitions", label: "Acquisitions" },
@@ -24,13 +25,13 @@ export function Header() {
         <div className="flex items-center justify-between gap-6 h-[72px] md:h-[80px]">
           <Link
             href="/"
-            className="shrink-0 flex items-center gap-2 font-bold text-lg md:text-xl tracking-tight text-ink"
+            className="shrink-0 flex items-center text-ink"
             aria-label="South Beach Acquisitions home"
           >
-            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-ink text-white text-sm font-extrabold">
-              SBA
-            </span>
-            <span className="hidden sm:inline">South Beach Acquisitions</span>
+            <BrandLogo
+              priority
+              className="h-9 max-h-9 md:h-11 md:max-h-11 max-w-[min(100%,220px)] md:max-w-[260px]"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
