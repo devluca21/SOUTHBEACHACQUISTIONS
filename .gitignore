@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Duplicate raw screen recording (site uses public/hero-banner.mp4)
+Public/Recording 2026-03-27 183225GOOD.mp4
+public/Recording 2026-03-27 183225GOOD.mp4

@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, Phone, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 
-const navLinks = [
-  { href: "#what-we-do", label: "What We Do" },
-  { href: "#who-its-for", label: "Who It's For" },
+const centerLinks = [
+  { href: "#acquisitions", label: "Acquisitions" },
+  { href: "#portfolio", label: "Portfolios" },
+  { href: "#verticals", label: "Verticals" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -16,48 +17,50 @@ export function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        background: "rgba(255, 255, 255, 0.85)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-      }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-ink/5"
+      role="banner"
     >
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-sans text-lg md:text-xl font-black uppercase tracking-tight text-foreground hover:opacity-80 transition-opacity"
-        >
-          South Beach Acquisitions
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-sans text-sm tracking-[0.2em] uppercase text-foreground/80 hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href="tel:+18771234567"
-            className="flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-foreground/80 hover:text-foreground transition-colors"
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10">
+        <div className="flex items-center justify-between gap-6 h-[72px] md:h-[80px]">
+          <Link
+            href="/"
+            className="shrink-0 flex items-center gap-2 font-bold text-lg md:text-xl tracking-tight text-ink"
+            aria-label="South Beach Acquisitions home"
           >
-            <Phone className="w-4 h-4" strokeWidth={1.5} />
-            Call
-          </a>
-        </nav>
+            <span className="flex items-center justify-center w-10 h-10 rounded-full bg-ink text-white text-sm font-extrabold">
+              SBA
+            </span>
+            <span className="hidden sm:inline">South Beach Acquisitions</span>
+          </Link>
 
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setMobileOpen((o) => !o)}
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          <nav className="hidden lg:flex items-center gap-10">
+            {centerLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-bold text-ink hover:opacity-75 transition-opacity"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-sm md:text-base px-6 py-3 shadow-pill">
+              Submit a Deal
+              <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+            </Link>
+
+            <button
+              type="button"
+              aria-label="Toggle menu"
+              className="lg:hidden p-2 text-ink rounded-lg hover:bg-slate-100"
+              onClick={() => setMobileOpen((o) => !o)}
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -66,26 +69,28 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl"
+            transition={{ duration: 0.22 }}
+            className="lg:hidden overflow-hidden border-t border-ink/5 bg-white"
           >
-            <nav className="flex flex-col px-6 py-6 gap-4">
-              {navLinks.map((link) => (
+            <nav className="flex flex-col px-6 py-4 gap-1">
+              {centerLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-sans text-sm tracking-[0.2em] uppercase text-foreground/80"
+                  className="font-semibold text-ink py-3"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="tel:+18771234567"
-                className="flex items-center gap-2 font-sans text-sm tracking-widest uppercase text-foreground/80 pt-2"
+              <Link
+                href="#submit-deal"
+                className="mt-2 btn-pill justify-center py-4"
+                onClick={() => setMobileOpen(false)}
               >
-                <Phone className="w-4 h-4" /> Call
-              </a>
+                Submit a Deal
+                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+              </Link>
             </nav>
           </motion.div>
         )}

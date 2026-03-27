@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jakarta",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "South Beach Acquisitions | Unsold Condos to Investor Network — South Coast, DR",
-  description: "We move condos that don't sell by placing them with our investor network. South of the Dominican Republic. Data-driven, discreet, fast.",
+  title: "South Beach Acquisitions | Southeast DR Tourism & Real Estate Fund",
+  description:
+    "High-ROI exposure to Dominican Republic southeast coast tourism, ground-up development, and institutional-grade commercial rental units.",
 };
 
 export default function RootLayout({
@@ -21,10 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang="en" className={jakarta.variable}>
+      <body className="font-sans antialiased bg-white text-ink">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

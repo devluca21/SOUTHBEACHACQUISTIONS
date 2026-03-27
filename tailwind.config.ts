@@ -9,16 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        serif: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
       },
       colors: {
+        ink: "#001F5C",
+        accent: {
+          DEFAULT: "#001F5C",
+          deep: "#001347",
+          soft: "#E8EEF5",
+          ondark: "#C5D9F0",
+        },
+        slate: {
+          muted: "#4A5568",
+        },
         background: "#FFFFFF",
-        foreground: "#000000",
+        foreground: "#001F5C",
+        navy: {
+          DEFAULT: "#001F5C",
+          deep: "#00102E",
+          muted: "#2D3748",
+        },
       },
-      spacing: {
-        "18": "4.5rem",
-        "30": "7.5rem",
+      letterSpacing: {
+        tight: "-0.02em",
+      },
+      boxShadow: {
+        pill: "0px 10px 28px rgba(0, 31, 92, 0.28)",
+        card: "0px 4px 24px rgba(0, 31, 92, 0.07)",
       },
     },
   },

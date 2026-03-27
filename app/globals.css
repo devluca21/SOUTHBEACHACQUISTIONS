@@ -4,17 +4,35 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #001f5c;
+  --ink: #001f5c;
+  --accent: #001f5c;
+  --accent-deep: #001347;
+  --slate-muted: #4a5568;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .heading-featured {
+    @apply font-extrabold tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .btn-pill {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-extrabold text-white px-8 py-3.5 text-sm md:text-base shadow-pill transition-transform hover:scale-[1.02] active:scale-[0.98];
+    background: linear-gradient(135deg, #002a72 0%, var(--accent-deep) 100%);
+  }
+
+  .btn-pill-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-extrabold text-ink border-2 border-ink/20 px-8 py-3.5 text-sm md:text-base bg-white hover:border-ink hover:bg-ink/[0.03] transition-colors;
   }
 }
