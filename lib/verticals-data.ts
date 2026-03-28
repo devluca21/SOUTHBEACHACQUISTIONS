@@ -1,4 +1,4 @@
-import { SOUTH_DR_COVERAGE_AREAS } from "./coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "./coverage-areas";
 import type { IntakeServiceValue } from "./intake-services";
 
 export type VerticalSlug =
@@ -30,8 +30,8 @@ export const VERTICALS = [
     title: "Condo rentals",
     oneLiner: "Active tourists and repeat guests—real demand, not just a listing.",
     detailParagraphs: [
-      `List your condo with us and tap into demand from travelers and repeat guests across the south of the Dominican Republic—${SOUTH_DR_COVERAGE_AREAS}—not a passive listing, but active positioning in the tourism corridor.`,
-      `We coordinate marketing, channel strategy, and introductions through our network so your unit is seen by people already planning stays and returns across ${SOUTH_DR_COVERAGE_AREAS}.`,
+      `List your condo with us and tap into demand from travelers and repeat guests along ${SOUTH_DR_COVERAGE_REGION}—not a passive listing, but active positioning in the tourism corridor.`,
+      `We coordinate marketing, channel strategy, and introductions through our network so your unit is seen by people already planning stays and returns along ${SOUTH_DR_COVERAGE_REGION}.`,
     ],
     processSteps: [
       {
@@ -151,7 +151,7 @@ export const VERTICALS = [
     oneLiner:
       "Pool capital to secure a large block of condos in promoted projects—at bulk pricing under public presale—then resell as construction ramps or hold to completion.",
     detailParagraphs: [
-      `This vertical is built for investor groups that want scale, not single units: we work with developments we actively promote across the south of the Dominican Republic—${SOUTH_DR_COVERAGE_AREAS}—and negotiate allocations so your group can take a sizeable bulk of condos at a discounted rate compared with what buyers see on the standard presale desk.`,
+      `This vertical is built for investor groups that want scale, not single units: we work with developments we actively promote along ${SOUTH_DR_COVERAGE_REGION} and negotiate allocations so your group can take a sizeable bulk of condos at a discounted rate compared with what buyers see on the standard presale desk.`,
       "A lower entry price supports two outcomes—sell into stronger demand as the project goes vertical and the market re-prices, or hold through delivery and aim for a better rate of return because your basis stayed below late-cycle presale. Structure, minimums, and how the group acts together stay clear from the first conversation.",
     ],
     processSteps: [
@@ -161,7 +161,7 @@ export const VERTICALS = [
       },
       {
         title: "Promoted-project match",
-        body: `We introduce projects we’re promoting in ${SOUTH_DR_COVERAGE_AREAS} where bulk condo inventory is still available, with economics versus public presale spelled out so you’re comparing apples to apples.`,
+        body: `We introduce projects we’re promoting along ${SOUTH_DR_COVERAGE_REGION} where bulk condo inventory is still available, with economics versus public presale spelled out so you’re comparing apples to apples.`,
       },
       {
         title: "Bulk terms, allocation, and docs",

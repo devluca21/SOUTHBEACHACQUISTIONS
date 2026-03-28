@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 import { RevealSection, RevealChild } from "./RevealSection";
 
 const aboutImage = "/hero-poster.jpg";
@@ -23,7 +23,7 @@ export function AboutAcquisitions() {
               Built for tourism tailwinds
             </h2>
             <p className="text-slate-muted mt-6 text-base md:text-lg leading-relaxed">
-              The Dominican south—{SOUTH_DR_COVERAGE_AREAS}—is scaling with new airlift,
+              Along {SOUTH_DR_COVERAGE_REGION}, tourism is scaling with new airlift,
               hospitality flags, and infrastructure that pull international visitors
               year-round. South Beach
               Acquisitions concentrates on{" "}

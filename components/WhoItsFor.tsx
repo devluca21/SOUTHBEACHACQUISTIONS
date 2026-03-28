@@ -1,6 +1,6 @@
 "use client";
 
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 import { RevealSection, RevealChild } from "./RevealSection";
 
 export function WhoItsFor() {
@@ -33,7 +33,9 @@ export function WhoItsFor() {
                 Investors
               </h3>
               <p className="font-sans text-white/85 text-lg leading-relaxed">
-                You want access to off-market and unsold inventory across the south of the Dominican Republic—{SOUTH_DR_COVERAGE_AREAS}—vetted, underwritten, and ready to move. We source it, we structure it, and we bring you opportunities that don&apos;t show up on the open market.
+                You want access to off-market and unsold inventory along {SOUTH_DR_COVERAGE_REGION},
+                vetted, underwritten, and ready to move. We source it, we structure it, and we bring you
+                opportunities that don&apos;t show up on the open market.
               </p>
             </div>
           </RevealChild>

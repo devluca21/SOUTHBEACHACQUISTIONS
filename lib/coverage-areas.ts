@@ -1,3 +1,3 @@
-/** South Dominican Republic markets emphasized across the site */
-export const SOUTH_DR_COVERAGE_AREAS =
-  "Bayahibe, Dominicus, Juan Dolio, Playa Nueva Romana, and Santo Domingo" as const;
+/** Vague regional focus for marketing copy (no named towns or cities). */
+export const SOUTH_DR_COVERAGE_REGION =
+  "the south east coast of the Dominican Republic" as const;

@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -14,7 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "South Beach Acquisitions | Dominican Tourism & Real Estate Fund",
-  description: `High-ROI exposure to Dominican coastal tourism, ground-up development, and institutional-grade commercial rental units—south DR focus: ${SOUTH_DR_COVERAGE_AREAS}.`,
+  description: `High-ROI exposure to Dominican coastal tourism, ground-up development, and institutional-grade commercial rental units—focused on ${SOUTH_DR_COVERAGE_REGION}.`,
 };
 
 export default function RootLayout({

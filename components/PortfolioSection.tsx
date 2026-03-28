@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 import { RevealSection, RevealChild } from "./RevealSection";
 import { ArrowRight } from "lucide-react";
 
@@ -35,9 +35,8 @@ export function PortfolioSection() {
               Portfolio snapshot
             </h2>
             <p className="text-slate-muted mt-3 text-lg max-w-xl leading-relaxed">
-              Representative themes across our mandate in the south of the Dominican Republic—
-              {SOUTH_DR_COVERAGE_AREAS}: tourism-linked assets, commercial income, and development
-              optionality.
+              Representative themes across our mandate along {SOUTH_DR_COVERAGE_REGION}:
+              tourism-linked assets, commercial income, and development optionality.
             </p>
           </div>
           <Link

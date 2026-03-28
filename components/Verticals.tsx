@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { RevealSection, RevealChild } from "./RevealSection";
 import { Home, Building2, KeyRound, HardHat, Users, ArrowRight } from "lucide-react";
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 import { VERTICALS, type VerticalSlug } from "@/lib/verticals-data";
 import type { LucideIcon } from "lucide-react";
 
@@ -24,8 +24,8 @@ export function Verticals() {
             The Verticals
           </h2>
           <p className="text-slate-muted mt-4 text-base md:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
-            Rentals, sales, development, and investor access across the south of the Dominican
-            Republic—{SOUTH_DR_COVERAGE_AREAS}—coordinated through our developer and agency network.
+            Rentals, sales, development, and investor access along {SOUTH_DR_COVERAGE_REGION},
+            coordinated through our developer and agency network.
           </p>
         </RevealChild>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
+import { SOUTH_DR_COVERAGE_REGION } from "@/lib/coverage-areas";
 import { RevealSection, RevealChild } from "./RevealSection";
 
 export function WhatWeDo() {
@@ -22,7 +22,8 @@ export function WhatWeDo() {
               Condos That Don&apos;t Sell
             </h3>
             <p>
-              We handle inventory that isn&apos;t moving on the open market by offering it to our investor network. Developers and sellers get liquidity; our investors get vetted opportunities. It&apos;s a direct bridge from unsold condos to capital that wants to deploy—focused on the south of the Dominican Republic ({SOUTH_DR_COVERAGE_AREAS}).
+              We handle inventory that isn&apos;t moving on the open market by offering it to our investor network. Developers and sellers get liquidity; our investors get vetted opportunities. It&apos;s a direct bridge from unsold condos to capital that wants to deploy—focused on{" "}
+              {SOUTH_DR_COVERAGE_REGION}.
             </p>
           </RevealChild>
 
@@ -37,7 +38,7 @@ export function WhatWeDo() {
               Proprietary Sourcing
             </h3>
             <p>
-              We bypass the public market. Through local networks and data analytics, we identify off-market opportunities and distressed assets—including condos that need a different buyer—to secure high-potential properties across {SOUTH_DR_COVERAGE_AREAS}.
+              We bypass the public market. Through local networks and data analytics, we identify off-market opportunities and distressed assets—including condos that need a different buyer—to secure high-potential properties across {SOUTH_DR_COVERAGE_REGION}.
             </p>
           </RevealChild>
 
@@ -65,7 +66,8 @@ export function WhatWeDo() {
             </h3>
             <ul className="space-y-3 list-none">
               <li>
-                <strong className="text-foreground">Target Geography:</strong> The south of the Dominican Republic, with active coverage in {SOUTH_DR_COVERAGE_AREAS}.
+                <strong className="text-foreground">Target Geography:</strong> Active along{" "}
+                {SOUTH_DR_COVERAGE_REGION}.
               </li>
               <li>
                 <strong className="text-foreground">Asset Classes:</strong> Condos (including unsold inventory), Multi-family (5+ units), Luxury Residential, and Mixed-Use Commercial.
@@ -84,7 +86,7 @@ export function WhatWeDo() {
               The South Beach Advantage
             </h3>
             <p>
-              Traditional real estate is reactive. We are proactive. We take condos that don&apos;t sell and place them with our investor network—no endless listing cycles. We are the bridge between untapped property potential and institutional-grade execution across the south of the Dominican Republic—{SOUTH_DR_COVERAGE_AREAS}. If you have unsold inventory, quiet listings, or need a discreet exit, we bring the capital and the network to get it done.
+              Traditional real estate is reactive. We are proactive. We take condos that don&apos;t sell and place them with our investor network—no endless listing cycles. We are the bridge between untapped property potential and institutional-grade execution along {SOUTH_DR_COVERAGE_REGION}. If you have unsold inventory, quiet listings, or need a discreet exit, we bring the capital and the network to get it done.
             </p>
           </RevealChild>
         </div>
