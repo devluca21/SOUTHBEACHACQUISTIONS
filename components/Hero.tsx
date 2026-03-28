@@ -33,7 +33,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 py-[calc(5.5rem+88px)] md:py-[calc(6rem+104px)]">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 py-[calc(5.5rem+200px)] md:py-[calc(6rem+236px)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-20 items-start">
           <div className="max-w-xl lg:max-w-none">
             <motion.h1

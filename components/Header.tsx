@@ -22,7 +22,7 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between gap-6 min-h-[128px] py-3.5 md:min-h-[152px] md:py-4">
+        <div className="flex items-center justify-between gap-4 md:gap-6 min-h-[220px] py-4 md:min-h-[268px] md:py-5">
           <Link
             href="/"
             className="shrink-0 flex items-center text-ink min-w-0"
@@ -30,17 +30,17 @@ export function Header() {
           >
             <BrandLogo
               priority
-              sizes="(max-width: 1023px) min(520px, calc(100vw - 5.5rem)), min(640px, calc(100vw - 22rem))"
-              className="h-[100px] min-h-[100px] w-auto md:h-[120px] md:min-h-[120px] max-w-[min(520px,calc(100vw-5.5rem))] md:max-w-[min(640px,calc(100vw-22rem))]"
+              sizes="(max-width: 1023px) min(936px, calc(100vw - 5.5rem)), min(1152px, calc(100vw - 22rem))"
+              className="h-[180px] min-h-[180px] w-auto md:h-[216px] md:min-h-[216px] max-w-[min(936px,calc(100vw-5.5rem))] md:max-w-[min(1152px,calc(100vw-22rem))]"
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-10 shrink-0">
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-10 shrink-0">
             {centerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-base font-bold text-ink leading-snug hover:opacity-75 transition-opacity"
+                className="text-lg font-bold text-ink leading-snug hover:opacity-75 transition-opacity"
               >
                 {link.label}
               </Link>

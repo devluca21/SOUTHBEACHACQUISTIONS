@@ -11,14 +11,14 @@ const links = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="scroll-mt-[128px] md:scroll-mt-[156px] bg-ink text-white border-t border-white/10">
+    <footer id="contact" className="scroll-mt-[220px] md:scroll-mt-[268px] bg-ink text-white border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-14 md:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div>
             <Link href="/" className="inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/80 rounded-sm">
               <BrandLogo
-                sizes="(max-width: 768px) min(520px, calc(100vw - 3rem)), 640px"
-                className="h-[100px] min-h-[100px] w-auto md:h-[120px] md:min-h-[120px] max-w-[min(640px,calc(100vw-3rem))] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
+                sizes="(max-width: 768px) min(936px, calc(100vw - 3rem)), 1152px"
+                className="h-[180px] min-h-[180px] w-auto md:h-[216px] md:min-h-[216px] max-w-[min(1152px,calc(100vw-3rem))] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
               />
             </Link>
             <p className="text-white/65 text-sm mt-4 max-w-sm leading-relaxed">

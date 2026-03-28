@@ -29,7 +29,7 @@ export function RevealSection({
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const Component = motion[as] as typeof motion.section;
 
-  const scrollMargin = id ? "scroll-mt-[128px] md:scroll-mt-[156px] " : "";
+  const scrollMargin = id ? "scroll-mt-[220px] md:scroll-mt-[268px] " : "";
 
   return (
     <Component
