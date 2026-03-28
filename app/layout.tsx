@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -22,7 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={jakarta.variable}>
-      <body className="font-sans antialiased bg-white text-ink">{children}</body>
+      <body className="font-sans antialiased bg-white text-ink">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
