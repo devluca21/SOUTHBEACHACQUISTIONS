@@ -22,7 +22,7 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between gap-6 h-[72px] md:h-[80px]">
+        <div className="flex items-center justify-between gap-6 min-h-[96px] py-3 md:min-h-[118px] md:py-3.5">
           <Link
             href="/"
             className="shrink-0 flex items-center text-ink"
@@ -30,7 +30,7 @@ export function Header() {
           >
             <BrandLogo
               priority
-              className="h-9 max-h-9 md:h-11 md:max-h-11 max-w-[min(100%,220px)] md:max-w-[260px]"
+              className="h-[68px] max-h-[68px] w-auto md:h-[84px] md:max-h-[84px] max-w-[min(100%,418px)] md:max-w-[494px]"
             />
           </Link>
 

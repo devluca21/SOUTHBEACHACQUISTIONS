@@ -11,12 +11,12 @@ const links = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-ink text-white border-t border-white/10">
+    <footer id="contact" className="scroll-mt-[100px] md:scroll-mt-[124px] bg-ink text-white border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-14 md:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div>
             <Link href="/" className="inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/80 rounded-sm">
-              <BrandLogo className="h-10 max-h-10 md:h-12 md:max-h-12 max-w-[min(100%,260px)] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity" />
+              <BrandLogo className="h-[76px] max-h-[76px] w-auto md:h-[91px] md:max-h-[91px] max-w-[min(100%,494px)] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity" />
             </Link>
             <p className="text-white/65 text-sm mt-4 max-w-sm leading-relaxed">
               High-ROI fund and mandate focused on southeast Dominican Republic tourism, development,

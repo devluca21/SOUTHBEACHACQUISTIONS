@@ -29,11 +29,13 @@ export function RevealSection({
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const Component = motion[as] as typeof motion.section;
 
+  const scrollMargin = id ? "scroll-mt-[100px] md:scroll-mt-[124px] " : "";
+
   return (
     <Component
       ref={ref}
       id={id}
-      className={className}
+      className={`${scrollMargin}${className}`.trim()}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={defaultVariants}
