@@ -12,8 +12,8 @@ export function BrandLogo({ className = "", priority, sizes }: BrandLogoProps) {
     <Image
       src="/sba-logo.png"
       alt="South Beach Acquisitions logo"
-      width={1620}
-      height={432}
+      width={2592}
+      height={691}
       sizes={sizes}
       className={`w-auto object-contain object-left ${className}`.trim()}
       priority={priority}
