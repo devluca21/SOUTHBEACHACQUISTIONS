@@ -22,7 +22,7 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between gap-4 md:gap-6 py-2 md:py-2.5">
+        <div className="flex items-start justify-between gap-3 md:gap-5 pt-2 md:pt-2.5 pb-[calc(0.15*(8px+288px)/0.85)] md:pb-[calc(0.15*(10px+346px)/0.85)]">
           <Link
             href="/"
             className="shrink-0 flex items-center text-ink min-w-0"
@@ -35,20 +35,20 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0 self-center">
             {centerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-bold text-ink leading-none py-1 hover:opacity-75 transition-opacity"
+                className="text-xs font-bold text-ink leading-none py-0.5 hover:opacity-75 transition-opacity"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-sm md:text-base px-5 py-2 shadow-pill">
+          <div className="flex items-center gap-2 shrink-0 self-center">
+            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-xs md:text-sm px-4 py-2 shadow-pill">
               Submit a Deal
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
             </Link>

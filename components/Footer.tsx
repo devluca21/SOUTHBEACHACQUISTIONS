@@ -11,7 +11,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="scroll-mt-[308px] md:scroll-mt-[372px] bg-ink text-white border-t border-white/10">
+    <footer id="contact" className="scroll-mt-[348px] md:scroll-mt-[420px] bg-ink text-white border-t border-white/10">
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-14 md:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
           <div>
