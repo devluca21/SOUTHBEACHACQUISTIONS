@@ -22,7 +22,7 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between gap-4 md:gap-6 min-h-[220px] py-4 md:min-h-[268px] md:py-5">
+        <div className="flex items-center justify-between gap-4 md:gap-6 py-2 md:py-2.5">
           <Link
             href="/"
             className="shrink-0 flex items-center text-ink min-w-0"
@@ -30,17 +30,17 @@ export function Header() {
           >
             <BrandLogo
               priority
-              sizes="(max-width: 1023px) min(936px, calc(100vw - 5.5rem)), min(1152px, calc(100vw - 22rem))"
-              className="h-[180px] min-h-[180px] w-auto md:h-[216px] md:min-h-[216px] max-w-[min(936px,calc(100vw-5.5rem))] md:max-w-[min(1152px,calc(100vw-22rem))]"
+              sizes="(max-width: 1023px) min(1498px, calc(100vw - 5.5rem)), min(1843px, calc(100vw - 22rem))"
+              className="h-[288px] min-h-[288px] w-auto md:h-[346px] md:min-h-[346px] max-w-[min(1498px,calc(100vw-5.5rem))] md:max-w-[min(1843px,calc(100vw-22rem))]"
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-10 shrink-0">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
             {centerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg font-bold text-ink leading-snug hover:opacity-75 transition-opacity"
+                className="text-sm font-bold text-ink leading-none py-1 hover:opacity-75 transition-opacity"
               >
                 {link.label}
               </Link>
@@ -48,7 +48,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3 shrink-0">
-            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-sm md:text-base px-6 py-3 shadow-pill">
+            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-sm md:text-base px-5 py-2 shadow-pill">
               Submit a Deal
               <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
             </Link>
@@ -74,12 +74,12 @@ export function Header() {
             transition={{ duration: 0.22 }}
             className="lg:hidden overflow-hidden border-t border-ink/5 bg-white"
           >
-            <nav className="flex flex-col px-6 py-4 gap-1">
+            <nav className="flex flex-col px-6 py-2 gap-0">
               {centerLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-semibold text-ink py-3"
+                  className="font-semibold text-ink text-sm py-2"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
@@ -87,7 +87,7 @@ export function Header() {
               ))}
               <Link
                 href="#submit-deal"
-                className="mt-2 btn-pill justify-center py-4"
+                className="mt-1 btn-pill justify-center py-3 text-sm"
                 onClick={() => setMobileOpen(false)}
               >
                 Submit a Deal
