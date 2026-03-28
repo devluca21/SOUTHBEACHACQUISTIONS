@@ -7,13 +7,13 @@ const steps = [
   {
     step: 1,
     title: "Submit the form",
-    body: "Share your name, contact details, and which service fits you—condo rentals, commercial rentals, development, or our investor pool for bulk opportunities.",
+    body: "Share your name, contact details, and which service fits you—condo rentals, commercial space for your business, development, or investor groups buying bulk condo blocks in promoted projects.",
     icon: FileText,
   },
   {
     step: 2,
     title: "Speak with a representative",
-    body: "Our team reaches out and walks you through every step—questions, timing, and how we work in the southeast DR market.",
+    body: "Our team reaches out and walks you through every step—questions, timing, and how we work in this market.",
     icon: Phone,
   },
   {

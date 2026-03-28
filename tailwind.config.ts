@@ -37,6 +37,16 @@ const config: Config = {
         pill: "0px 10px 28px rgba(0, 31, 92, 0.28)",
         card: "0px 4px 24px rgba(0, 31, 92, 0.07)",
       },
+      keyframes: {
+        "vertical-card-sweep": {
+          "0%": { transform: "translateX(-120%)" },
+          "100%": { transform: "translateX(120%)" },
+        },
+      },
+      animation: {
+        "vertical-card-sweep":
+          "vertical-card-sweep 0.75s cubic-bezier(0.33, 1, 0.68, 1) both",
+      },
     },
   },
   plugins: [],

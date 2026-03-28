@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
 import { IntakeForm } from "./IntakeForm";
 
 const heroVideoSrc = "/hero-banner.mp4";
@@ -33,7 +34,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 py-[calc(5.5rem+320px)] md:py-[calc(6rem+364px)]">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 py-[calc(5.5rem+134px)] md:py-[calc(6rem+150px)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 xl:gap-20 items-start">
           <div className="max-w-xl lg:max-w-none">
             <motion.h1
@@ -50,9 +51,9 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.12 }}
             >
-              The southeast coast is scaling faster than most portfolios can keep up—and the best
-              condo blocks, commercial pads, and development plays are spoken for long before they
-              hit a listing site.{" "}
+              Coastal tourism in the Dominican south—{SOUTH_DR_COVERAGE_AREAS}—is scaling faster
+              than most portfolios can keep up, and the best condo blocks, commercial pads, and
+              development plays are spoken for long before they hit a listing site.{" "}
               <strong className="text-white font-semibold">
                 Tell us what you want exposure to
               </strong>

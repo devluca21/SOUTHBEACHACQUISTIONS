@@ -9,6 +9,15 @@
   --accent: #001f5c;
   --accent-deep: #001347;
   --slate-muted: #4a5568;
+  /* Fixed header: vertical padding + logo 144px; keep in sync with components/Header.tsx */
+  --page-top-clear: calc(168px + 1.75rem);
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* md: padding + logo 173px */
+    --page-top-clear: calc(199px + 2.25rem);
+  }
 }
 
 body {

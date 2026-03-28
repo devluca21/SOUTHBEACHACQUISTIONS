@@ -1,10 +1,14 @@
 "use client";
 
+import { SOUTH_DR_COVERAGE_AREAS } from "@/lib/coverage-areas";
 import { RevealSection } from "./RevealSection";
 
 const stats = [
   { value: "Target 15%+", label: "Fund-level IRR objective" },
-  { value: "Southeast DR", label: "Tourism & rental focus" },
+  {
+    value: "South DR",
+    label: `Key markets: ${SOUTH_DR_COVERAGE_AREAS}`,
+  },
   { value: "Institutional", label: "Development & commercial deals" },
   {
     value: "Side by side",

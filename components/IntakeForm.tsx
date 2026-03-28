@@ -2,20 +2,32 @@
 
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { INTAKE_SERVICES } from "@/lib/intake-services";
+import { INTAKE_SERVICES, type IntakeServiceValue } from "@/lib/intake-services";
 
 const field =
   "w-full font-sans text-ink bg-white rounded-2xl px-4 py-3 border border-slate-200 focus:border-ink focus:ring-2 focus:ring-ink/15 focus:outline-none placeholder:text-slate-muted/60 transition-shadow text-sm md:text-base";
 
 const labelClass = "text-xs md:text-sm font-bold text-ink block mb-1.5";
 
+const defaultGoalPlaceholder =
+  "What are you trying to achieve? Name the service you care about (condo, commercial space, sale, development, bulk condos with an investor group), timeline, and what a good outcome looks like.";
+
 type IntakeFormProps = {
   idPrefix: string;
   /** Extra wrapper classes for the form element */
   formClassName?: string;
+  /** When set, the service field is hidden (page context is that service). Value still posts as `service`. */
+  fixedService?: IntakeServiceValue;
+  /** Overrides the “Your goal” placeholder (e.g. vertical-specific page). */
+  goalPlaceholder?: string;
 };
 
-export function IntakeForm({ idPrefix, formClassName = "" }: IntakeFormProps) {
+export function IntakeForm({
+  idPrefix,
+  formClassName = "",
+  fixedService,
+  goalPlaceholder = defaultGoalPlaceholder,
+}: IntakeFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,8 +39,16 @@ export function IntakeForm({ idPrefix, formClassName = "" }: IntakeFormProps) {
 
   const pid = (name: string) => `${idPrefix}-${name}`;
 
+  const serviceLabel =
+    fixedService != null
+      ? INTAKE_SERVICES.find((s) => s.value === fixedService)?.label ?? fixedService
+      : null;
+
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${formClassName}`}>
+      {fixedService != null && (
+        <input type="hidden" name="service" value={fixedService} aria-label={`Service: ${serviceLabel}`} />
+      )}
       <div>
         <label htmlFor={pid("name")} className={labelClass}>
           Name
@@ -75,27 +95,42 @@ export function IntakeForm({ idPrefix, formClassName = "" }: IntakeFormProps) {
         />
       </div>
       <div>
-        <label htmlFor={pid("service")} className={labelClass}>
-          Service
+        <label htmlFor={pid("goal")} className={labelClass}>
+          Your goal
         </label>
-        <select
-          id={pid("service")}
-          name="service"
-          required
-          className={field}
+        <textarea
+          id={pid("goal")}
+          name="goal"
+          rows={4}
+          className={`${field} min-h-[108px] resize-y`}
+          placeholder={goalPlaceholder}
           disabled={status === "done"}
-          defaultValue=""
-        >
-          <option value="" disabled>
-            Select a service
-          </option>
-          {INTAKE_SERVICES.map((s) => (
-            <option key={s.value} value={s.value}>
-              {s.label}
-            </option>
-          ))}
-        </select>
+        />
       </div>
+      {fixedService == null && (
+        <div>
+          <label htmlFor={pid("service")} className={labelClass}>
+            Service
+          </label>
+          <select
+            id={pid("service")}
+            name="service"
+            required
+            className={field}
+            disabled={status === "done"}
+            defaultValue=""
+          >
+            <option value="" disabled>
+              Select a service
+            </option>
+            {INTAKE_SERVICES.map((s) => (
+              <option key={s.value} value={s.value}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       <div className="pt-2">
         <button
           type="submit"

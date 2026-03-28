@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Linkedin, Twitter } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 
 const links = [
@@ -11,23 +10,23 @@ const links = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="scroll-mt-[348px] md:scroll-mt-[420px] bg-ink text-white border-t border-white/10">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-14 md:py-16">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
-          <div>
-            <Link href="/" className="inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/80 rounded-sm">
-              <BrandLogo
-                sizes="(max-width: 768px) min(1498px, calc(100vw - 3rem)), 1843px"
-                className="h-[288px] min-h-[288px] w-auto md:h-[346px] md:min-h-[346px] max-w-[min(1843px,calc(100vw-3rem))] brightness-0 invert opacity-95 hover:opacity-100 transition-opacity"
-              />
-            </Link>
-            <p className="text-white/65 text-sm mt-4 max-w-sm leading-relaxed">
-              High-ROI fund and mandate focused on southeast Dominican Republic tourism, development,
-              and commercial rental income.
-            </p>
-          </div>
+    <footer id="contact" className="scroll-mt-[170px] md:scroll-mt-[202px] bg-ink text-white border-t border-white/10">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-8 md:py-9">
+        <div className="flex flex-col items-start gap-5 md:flex-row md:items-center md:justify-between md:gap-6 lg:gap-8">
+          <Link
+            href="/"
+            className="block shrink-0 leading-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/80 rounded-sm"
+          >
+            <BrandLogo
+              sizes="(max-width: 640px) min(360px, 88vw), (max-width: 1024px) 400px, 480px"
+              className="block h-36 w-auto max-w-[min(1843px,calc(100vw-2rem))] align-middle brightness-0 invert opacity-100 transition-opacity sm:h-40 md:h-44 lg:h-48"
+            />
+          </Link>
 
-          <nav className="flex flex-wrap gap-x-8 gap-y-2">
+          <nav
+            className="flex flex-wrap items-center gap-x-8 gap-y-2 md:justify-end"
+            aria-label="Footer"
+          >
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -38,33 +37,9 @@ export function Footer() {
               </Link>
             ))}
           </nav>
-
-          <div className="flex flex-col gap-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-white/45">Connect</span>
-            <div className="flex gap-3">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" strokeWidth={2} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" strokeWidth={2} />
-              </a>
-            </div>
-          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-sm text-white/45 text-center md:text-left font-medium">
+        <div className="mt-5 pt-5 border-t border-white/10 text-sm text-white/45 font-medium">
           © {new Date().getFullYear()} South Beach Acquisitions. All rights reserved.
         </div>
       </div>

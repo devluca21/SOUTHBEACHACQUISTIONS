@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { BrandLogo } from "./BrandLogo";
 
@@ -22,46 +22,45 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-start justify-between gap-3 md:gap-5 pt-2 md:pt-2.5 pb-[calc(0.15*(8px+288px)/0.85)] md:pb-[calc(0.15*(10px+346px)/0.85)]">
+        <div className="flex w-full items-center gap-6 lg:gap-8 pt-2.5 pb-3 md:pt-3 md:pb-3.5">
           <Link
             href="/"
-            className="shrink-0 flex items-center text-ink min-w-0"
+            className="relative shrink-0 block h-[144px] w-[min(280px,calc(100vw-5rem))] overflow-hidden text-ink sm:w-[min(300px,calc(100vw-5rem))] md:h-[173px] md:w-[min(340px,calc(100vw-8rem))] lg:w-[min(380px,38vw)]"
             aria-label="South Beach Acquisitions home"
           >
-            <BrandLogo
-              priority
-              sizes="(max-width: 1023px) min(1498px, calc(100vw - 5.5rem)), min(1843px, calc(100vw - 22rem))"
-              className="h-[288px] min-h-[288px] w-auto md:h-[346px] md:min-h-[346px] max-w-[min(1498px,calc(100vw-5.5rem))] md:max-w-[min(1843px,calc(100vw-22rem))]"
-            />
+            <span className="absolute left-0 top-0 flex h-full items-center origin-left scale-[1.65] will-change-transform">
+              <BrandLogo
+                priority
+                objectPosition="left"
+                sizes="(max-width: 1023px) 200px, 240px"
+                className="h-[144px] min-h-[144px] w-auto max-w-none md:h-[173px] md:min-h-[173px]"
+              />
+            </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-6 shrink-0 self-center">
+          <nav
+            className="hidden lg:flex flex-1 items-center justify-end gap-x-9 xl:gap-x-10 pr-0.5"
+            aria-label="Primary"
+          >
             {centerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs font-bold text-ink leading-none py-0.5 hover:opacity-75 transition-opacity"
+                className="text-[0.9375rem] font-bold text-ink tracking-tight whitespace-nowrap py-1 hover:text-ink/70 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 shrink-0 self-center">
-            <Link href="#submit-deal" className="hidden sm:inline-flex btn-pill text-xs md:text-sm px-4 py-2 shadow-pill">
-              Submit a Deal
-              <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-            </Link>
-
-            <button
-              type="button"
-              aria-label="Toggle menu"
-              className="lg:hidden p-2 text-ink rounded-lg hover:bg-slate-100"
-              onClick={() => setMobileOpen((o) => !o)}
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            className="lg:hidden ml-auto -mr-1 p-2.5 text-ink rounded-xl hover:bg-slate-100/90 transition-colors"
+            onClick={() => setMobileOpen((o) => !o)}
+          >
+            {mobileOpen ? <X className="w-6 h-6" strokeWidth={2} /> : <Menu className="w-6 h-6" strokeWidth={2} />}
+          </button>
         </div>
       </div>
 
@@ -74,25 +73,17 @@ export function Header() {
             transition={{ duration: 0.22 }}
             className="lg:hidden overflow-hidden border-t border-ink/5 bg-white"
           >
-            <nav className="flex flex-col px-6 py-2 gap-0">
+            <nav className="flex flex-col px-6 py-3 gap-0.5" aria-label="Primary mobile">
               {centerLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-semibold text-ink text-sm py-2"
+                  className="font-bold text-ink text-[1.0625rem] py-2.5 leading-snug rounded-lg hover:bg-slate-50 px-1 -mx-1 transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="#submit-deal"
-                className="mt-1 btn-pill justify-center py-3 text-sm"
-                onClick={() => setMobileOpen(false)}
-              >
-                Submit a Deal
-                <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-              </Link>
             </nav>
           </motion.div>
         )}
