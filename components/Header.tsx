@@ -22,24 +22,25 @@ export function Header() {
       role="banner"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between gap-6 min-h-[96px] py-3 md:min-h-[118px] md:py-3.5">
+        <div className="flex items-center justify-between gap-6 min-h-[128px] py-3.5 md:min-h-[152px] md:py-4">
           <Link
             href="/"
-            className="shrink-0 flex items-center text-ink"
+            className="shrink-0 flex items-center text-ink min-w-0"
             aria-label="South Beach Acquisitions home"
           >
             <BrandLogo
               priority
-              className="h-[68px] max-h-[68px] w-auto md:h-[84px] md:max-h-[84px] max-w-[min(100%,418px)] md:max-w-[494px]"
+              sizes="(max-width: 1023px) min(520px, calc(100vw - 5.5rem)), min(640px, calc(100vw - 22rem))"
+              className="h-[100px] min-h-[100px] w-auto md:h-[120px] md:min-h-[120px] max-w-[min(520px,calc(100vw-5.5rem))] md:max-w-[min(640px,calc(100vw-22rem))]"
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10 shrink-0">
             {centerLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-bold text-ink hover:opacity-75 transition-opacity"
+                className="text-base font-bold text-ink leading-snug hover:opacity-75 transition-opacity"
               >
                 {link.label}
               </Link>
